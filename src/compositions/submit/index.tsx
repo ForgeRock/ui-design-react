@@ -7,13 +7,13 @@ export interface Props extends React.HTMLAttributes<{}> {
   pendingLabel: string;
 }
 
-function Submit({ className, label, pending, pendingLabel }: Props) {
+function Submit({ className, id, label, pending, pendingLabel }: Props) {
   return (
     <>
       {pending ? (
         <Button.Spinner className={className}>{pendingLabel}</Button.Spinner>
       ) : (
-        <Button className={className} type="submit" variant="primary">
+        <Button className={className} id={id} type="submit" variant="primary">
           {label}
         </Button>
       )}

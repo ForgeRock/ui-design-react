@@ -70,6 +70,7 @@ function SignIn(props: Props) {
         >
           <Submit
             className={styles.w100}
+            id="sign-in-submit"
             label="Sign In"
             pendingLabel="Signing In..."
             pending={pending}
