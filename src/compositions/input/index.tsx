@@ -168,6 +168,7 @@ Input.Preview = ({
 }: Props & { onPreviewClick: () => void }) => {
   const buttonClasses = classNames(styles.textNowrap);
   const iconClasses = classNames(styles.materialIcons, 'material-icons-outlined');
+  const buttonId = `${id}_previewButton`;
   return (
     <Form.LabelGroup>
       <Form.LabelGroupInput>
@@ -185,7 +186,7 @@ Input.Preview = ({
         />
       </Form.LabelGroupInput>
       <InputGroup.Append>
-        <Button className={buttonClasses} onClick={onPreviewClick}>
+        <Button className={buttonClasses} onClick={onPreviewClick} id={buttonId}>
           <span className={styles.textNowrap}>
             <i className={iconClasses}>visibility</i>
             <span className={classNames(styles.dNone, styles.dMdInline, styles.ml3)}>Preview</span>
